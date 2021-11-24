@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>Извеждане на числа в диапазон</title>
+</head>
+<body>
+
+    <button onclick="printNumbers(10,5)">Покажи</button>
+
+    <p id="info"></p>
+
+    <script>
+        function printNumbers(arg1, arg2){
+            var text = "";
+
+            if(arg1 > arg2){
+                let t = arg2;
+                arg2 = arg1;
+                arg1  = t;
+            }
+
+            var i = arg1;
+            do {
+                text += "<br>Числото е " + i;
+                i++;
+            }while(i <= arg2);
+
+            document.getElementById("info").innerHTML = text;
+        }
+    </script>
+    
+</body>
+</html>
